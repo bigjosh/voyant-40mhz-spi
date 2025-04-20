@@ -32,9 +32,12 @@ set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_miso}]
 
 # We will use this temporarily as the clock input becuase the clock input
 # pin on the voyant board is not accessable on the Tranez carrier board.
+# We picked this pin becuase it is no-connection on the Voyant PCB so
+# no damage in case wrong code gets installed. It is also near the other pins
+# on the carrier board header J2. 
 # Change this when moving to the Voyany PCB 
-# Appears on the Trenz TE0703 carrier on header J2-A6
-set_property PACKAGE_PIN    M15         [get_ports {multi_spi_clk}]  
+# Appears on the Trenz TE0703 carrier on header J2-B8
+set_property PACKAGE_PIN    K17         [get_ports {multi_spi_clk}]  
 set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_clk}]
 
 ######
