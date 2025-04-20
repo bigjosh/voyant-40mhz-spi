@@ -40,6 +40,14 @@ set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_miso}]
 set_property PACKAGE_PIN    K17         [get_ports {multi_spi_clk}]  
 set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_clk}]
 
+
+
+# 1. Tell synthesis not to add a BUFG
+set_property CLOCK_BUFFER_TYPE NONE [get_ports {multi_spi_clk}]
+
+# 2. Tell the placer that a dedicated route is not required
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {multi_spi_clk_IBUF}]
+
 ######
 # CS #
 ######
@@ -66,19 +74,7 @@ set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_cs}]
 
 set_property PACKAGE_PIN    J17         [get_ports {gnd}]  
 set_property IOSTANDARD     LVCMOS18    [get_ports {gnd}]
-
-
-
-###############################################################################
-# Clock input - Si5338 output "PLL_CLK_P" on FPGA pin H4 (single-ended use)
- # bank B16 → jumper J5/J8
-###############################################################################
-
-set_property PACKAGE_PIN H4         [get_ports    clk]
-
-set_property IOSTANDARD  LVCMOS33   [get_ports    clk] 
-
-create_clock -period 10.0 -name sys_clk [get_ports clk] 
+ 
 
 ###############################################################################
 # LED D4  (green)  - JB2-90 → FPGA pin J16  (bank 15, 3.3 V default on TE0703)
