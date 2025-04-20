@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tfbg484-1" LaunchTime="1745158730" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/spi_bulk_slave.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg484-1" LaunchTime="1745167140" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/spi_bulk_slave.dcp">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>

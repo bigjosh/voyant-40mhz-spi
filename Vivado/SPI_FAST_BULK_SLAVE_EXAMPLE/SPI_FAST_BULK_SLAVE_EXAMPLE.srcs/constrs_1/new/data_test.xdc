@@ -56,6 +56,19 @@ set_property PACKAGE_PIN    L15         [get_ports {multi_spi_cs}]
 set_property IOSTANDARD     LVCMOS18    [get_ports {multi_spi_cs}]
 
 
+
+#######
+# GND #
+#######
+
+# Here we make a synthentic ground just to have a connvienent place to 
+# connect to that is near other pins
+
+set_property PACKAGE_PIN    J17         [get_ports {gnd}]  
+set_property IOSTANDARD     LVCMOS18    [get_ports {gnd}]
+
+
+
 ###############################################################################
 # Clock input - Si5338 output "PLL_CLK_P" on FPGA pin H4 (single-ended use)
  # bank B16 → jumper J5/J8

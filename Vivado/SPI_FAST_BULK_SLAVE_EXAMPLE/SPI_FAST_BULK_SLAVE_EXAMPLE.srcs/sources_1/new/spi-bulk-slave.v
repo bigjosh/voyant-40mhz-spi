@@ -3,7 +3,8 @@ module top(
     output wire led,                    // Just for visual feedback
     output wire multi_spi_clk,         // 10 Hz
     output wire multi_spi_miso,        // 5 Hz
-    output wire multi_spi_cs           // 2.5 Hz
+    output wire multi_spi_cs,           // 2.5 Hz
+    output wire gnd
 );
     /* --------------------------------------------------------- */
     localparam CLK_HZ      = 100_000_000;
@@ -39,4 +40,7 @@ module top(
     assign multi_spi_clk  = clk_flop;        // 10 Hz
     assign multi_spi_miso = miso_flop;  // 5 Hz
     assign multi_spi_cs   = cs_flop;    // 2.5 Hz
+    
+    assign gnd = 1'b0;              // Force this pin low so we can use it as a ground.
+        
 endmodule

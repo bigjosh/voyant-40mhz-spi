@@ -128,3 +128,8 @@
     <Process Command="vivado.bat" Owner="passp" Host="DESKTOP-CR2BPO8" Pid="53300" HostCore="12" HostMemory="034239721472">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="passp" Host="DESKTOP-CR2BPO8" Pid="58592" HostCore="12" HostMemory="034239721472">
+    </Process>
+</ProcessHandle>
